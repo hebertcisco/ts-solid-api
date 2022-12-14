@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "@types/nodemailer": "^6.4.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "nodemailer": "^6.6.1",
     "uuidv4": "^6.2.4"
   },
