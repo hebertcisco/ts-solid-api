@@ -2,10 +2,11 @@
   "name": "ts-solid-api",
   "version": "1.0.0",
   "description": "",
-  "main": "dit/server.js",
-  "types": "src/server.d.ts",
+  "main": "dist/server.js",
+  "types": "dist/server.d.ts",
   "scripts": {
     "dev": "tsnd --transpile-only --respawn --ignore-watch node_modules src/server.ts",
+    "start": "node .",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.(js|ts)\"",
     "lint": "eslint src --ext .js,.ts",
