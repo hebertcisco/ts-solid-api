@@ -3,8 +3,9 @@ import type { Request, Response } from "express";
 import type { CreateUserUseCase } from "./CreateUserUseCase";
 
 export class CreateUserController {
-  constructor(private createUserCase: CreateUserUseCase) {}
-  async handle(request: Request, response: Response): Promise<Response> {
+  public constructor(private createUserCase: CreateUserUseCase) {}
+  
+  public async handle(request: Request, response: Response): Promise<Response> {
     const { name, email, password } = request.body;
     try {
       await this.createUserCase.execute({
