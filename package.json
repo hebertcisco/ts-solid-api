@@ -1,20 +1,40 @@
 {
-  "name": "solidapi",
+  "name": "ts-solid-api",
   "version": "1.0.0",
   "description": "",
-  "main": "sever.ts",
+  "main": "dit/server.js",
+  "types": "src/server.d.ts",
   "scripts": {
-    "start": "tsnd --transpile-only --respawn --ignore-watch node_modules src/server.ts"
+    "dev": "tsnd --transpile-only --respawn --ignore-watch node_modules src/server.ts",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.(js|ts)\"",
+    "lint": "eslint src --ext .js,.ts",
+    "lint:fix": "eslint src --fix --ext .js,.ts",
+    "prepare": "husky install",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
-  "author": "",
+  "engines": {
+    "node": ">=16.19.0",
+    "npm": ">=8.19.3"
+  },
+  "author": "Hebert Cisco",
   "license": "ISC",
   "dependencies": {
+    "@types/express": "^4.17.15",
+    "@types/node": "^16.18.10",
     "@types/nodemailer": "^6.4.0",
     "express": "^4.17.3",
-    "nodemailer": "^6.6.1",
-    "uuidv4": "^6.2.4"
+    "nodemailer": "^6.6.1"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "5.47.0",
+    "@typescript-eslint/parser": "5.47.0",
+    "eslint": "^8.30.0",
+    "husky": "^8.0.2",
+    "prettier": "^2.8.1",
     "ts-node-dev": "1.1.8",
     "typescript": "4.5.5"
   }
