@@ -1,5 +1,7 @@
 # 🏛 SOLID principles in a REST API with Node.js and TypeScript
 
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/hebertcisco/ts-solid-api/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/hebertcisco/ts-solid-api/tree/main)
+
 ## Running application with npm scrips
 
 ```sh
