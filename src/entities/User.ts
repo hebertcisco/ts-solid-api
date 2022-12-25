@@ -1,7 +1,6 @@
-import crypto from 'node:crypto';
+import crypto from "node:crypto";
 
 export class User {
-    
   public readonly id!: string;
 
   public name!: string;

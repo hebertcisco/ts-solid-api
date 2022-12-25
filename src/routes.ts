@@ -7,7 +7,7 @@ const router = Router();
 
 router.get("/", (request: Request, response: Response) => {
   return response.json({
-    message: "Welcome!"
+    message: "Welcome!",
   });
 });
 
