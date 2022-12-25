@@ -4,12 +4,12 @@ import { IUserRepository } from "../../repositories/IUserRepository";
 import { User } from "../../entities/User";
 
 export class CreateUserUseCase {
-  constructor(
+  public constructor(
     private userRepository: IUserRepository,
     private mailProvider: IMailProvider
   ) {}
 
-  async execute(data: ICreateUserRequestDTO) {
+  public async execute(data: ICreateUserRequestDTO) {
     const userAlreadyExists = await this.userRepository.findByEmail(data.email);
     if (userAlreadyExists) {
       throw new Error("User already exists.");
